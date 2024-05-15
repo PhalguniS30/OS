@@ -1,0 +1,19 @@
+!/bin/bash
+
+echo "Enter a string"
+read input
+
+rev=""
+len=${#input}
+
+for((i=$len;i>=0;i-- ))
+do
+   rev=$rev${input:$i:1}
+done
+
+if [ $input == $rev ]
+then
+    echo "String is palindrome"
+else
+    echo "String is not palindrome"
+fi

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Whether number is prime or not"
+echo "enter any no: \c"
+read n
+i=2
+
+if [ $n -lt 2 ]
+then 
+    echo "$n is not prime number"
+    exit
+fi
+
+while [ $i -lt $n ]
+do
+    if [ `expr $n % $i` -eq 0 ]
+    then
+        echo "$n is not prime number"
+        exit
+    fi
