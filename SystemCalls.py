@@ -7,6 +7,8 @@ def process_related_system_calls():
     if pid == 0:
         # Child process
         print("Child process with PID:", os.getpid())
+        print("\nExecuting child process: ls-l command")
+        os.execlp("ls", "ls", "-l")  # Executing 'ls -l'
         os._exit(0)
     else:
         # Parent process
